@@ -39,16 +39,20 @@ These images correspond directly to entries in the data.csv file
 - Place convert_dataset.py on project folder
 - Edit the CSV and IMAGES Path in the convert_dataset.py to your own path
 - Run the script to build dataset
-- python convert_dataset.py
-
+```
+python convert_dataset.py
+```
 
 ## Training the Data
 For NVIDIA GPU
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
 
 For Mac, just need YOLO
+```
 pip install ultralytics tensorboard
-
+```
 
 
 ## License
