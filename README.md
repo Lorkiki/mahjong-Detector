@@ -54,6 +54,24 @@ For Mac, just need YOLO
 pip install ultralytics tensorboard
 ```
 
+- Choose yolo11s
+```
+yolo detect train \
+    model=yolo11s.pt \
+    data=Mahjong_detect-18/data.yaml \
+    epochs=100 \
+    imgsz=1024 \
+    batch=-1 \
+    device=0 \
+    name=mahjong_y11s_v18 \
+    project=runs \
+    cos_lr=True \
+    patience=20 \
+    degrees=10 translate=0.1 scale=0.5 shear=2 fliplr=0.5 \
+    hsv_h=0.015 hsv_s=0.7 hsv_v=0.4
+
+```
+
 
 ## License
 Open sourced under MIT License
