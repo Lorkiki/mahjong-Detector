@@ -8,6 +8,7 @@ Mahjong Tile Detector built with YOLO.
 ## Dataset Structure
 - The dataset used for training is organized under the train.zip
 - Inside train, there are two key components:
+
 train/
 ├── images/
 │ ├── 1.jpg
@@ -21,6 +22,7 @@ Contains the raw Mahjong tile images used for training
 Each image is named numerically
 These images correspond directly to entries in the data.csv file
 2. CSV Metadata File
+
 | Column       | Description                                 |
 | ------------ | ------------------------------------------- |
 | `image-name` | Filename of the image (e.g., `1.jpg`)       |
