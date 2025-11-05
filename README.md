@@ -9,6 +9,7 @@ Mahjong Tile Detector built with YOLO.
 - The dataset used for training is organized under the train.zip
 - Inside train, there are two key components:
 
+```
 train/
 ├── images/
 │ ├── 1.jpg
@@ -16,6 +17,8 @@ train/
 │ ├── 3.jpg
 │ └── ...
 └── data.csv
+```
+
 1. Images Folder
 Description:
 Contains the raw Mahjong tile images used for training
