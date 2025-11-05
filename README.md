@@ -33,5 +33,14 @@ These images correspond directly to entries in the data.csv file
 | `label-name` | Human-readable tile name (e.g., `bamboo-3`) |
 
 
+## Convert Dataset
+- Transforms the original dataset into a clean and YOLO-ready classification format.
+- Filsters the dataset to include only Fujian Mahjong tiles
+- Place convert_dataset.py on project folder
+- Edit the CSV and IMAGES Path in the convert_dataset.py to your own path
+- Run the script to build dataset
+- python convert_dataset.py
+
+
 ## License
 Open sourced under MIT License
