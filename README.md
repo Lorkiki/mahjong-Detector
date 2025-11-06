@@ -62,6 +62,17 @@ yolo detect train \
     patience=20 
 ```
 
+## Predict the Image
+- best.pt is result of training
+- Run the command to predict images
+
+```
+yolo detect predict \
+model=runs/detect/train/weights/best.pt \
+source="PATH of image" \
+save=True \
+device=mps
+```
 
 ## License
 Open sourced under MIT License
