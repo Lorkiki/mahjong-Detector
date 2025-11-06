@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mahjong Tile Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/static/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Mahjong Tile Detector</h1>
+    <p class="sub">Drag & drop an image below (or click) and we’ll run your YOLO model.</p>
+
+    <div id="dropzone" class="dropzone">
+      <input id="fileInput" type="file" accept="image/*" hidden />
+      <div>Drop image here or <button id="browseBtn" type="button">browse</button></div>
+    </div>
+
+    <div id="status" class="status">Idle</div>
+
+    <div id="result" class="result">
+      <img id="resultImg" alt="prediction will appear here" />
+      <div id="meta"></div>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
