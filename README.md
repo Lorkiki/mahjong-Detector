@@ -74,5 +74,15 @@ save=True \
 device=mps
 ```
 
+## Host website and show result
+run command to create environment 
+download needed requirements
+```
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+export YOLO_MODEL=best.pt
+python app.py
+```
+
 ## License
 Open sourced under MIT License
