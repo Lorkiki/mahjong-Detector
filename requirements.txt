@@ -1,0 +1,4 @@
+flask>=3.0.0
+ultralytics>=8.3.0
+torch  # (preinstalled on Mac via pip works with MPS; on Windows/Linux you may install CUDA build)
+opencv-python>=4.8.0
