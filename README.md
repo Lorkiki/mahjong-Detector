@@ -34,42 +34,32 @@ These images correspond directly to entries in the data.csv file
 
 
 ## Convert Dataset
-- Transforms the original dataset into a clean and YOLO-ready classification format.
+- Transforms the original dataset into a clean and YOLO-ready format.
 - Filsters the dataset to include only Fujian Mahjong tiles
 - Place convert_dataset.py on project folder
-- Edit the CSV and IMAGES Path in the convert_dataset.py to your own path
 - Run the script to build dataset
 ```
-python convert_dataset.py
+python convert_dataset.py \
+--csv PATH of csv file
+--images PATH of images folder
+--dst CREATE a folder name for clean dataset
+--val 0.2 Vadidation split ratio
+--seed 42 random seed for splitting
 ```
 
 ## Training the Data
-For NVIDIA GPU
-```
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-```
-
-For Mac, just need YOLO
-```
-pip install ultralytics tensorboard
-```
-
-- Choose yolo11s
+For Macbook
 ```
 yolo detect train \
     model=yolo11s.pt \
-    data=Mahjong_detect-18/data.yaml \
+    data=dst/data.yaml \
     epochs=100 \
     imgsz=1024 \
     batch=-1 \
-    device=0 \
-    name=mahjong_y11s_v18 \
-    project=runs \
+    device=mps \
+    name=mahjong_y11s 
     cos_lr=True \
-    patience=20 \
-    degrees=10 translate=0.1 scale=0.5 shear=2 fliplr=0.5 \
-    hsv_h=0.015 hsv_s=0.7 hsv_v=0.4
-
+    patience=20 
 ```
 
 
