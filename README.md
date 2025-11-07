@@ -85,7 +85,9 @@ python app.py
 
 ## Result Images
 images/1.jpg
-![Mahjong Demo](Images/1.jpg)
+![Mahjong Demo](Images/1.png)
+![Mahjong Demo](Images/2.png)
+![Mahjong Demo](Images/3.png)
 
 
 ## License
