@@ -85,6 +85,7 @@ python app.py
 
 ## Result Images
 images/1.jpg
+![Mahjong Demo](Images/1.jpg)
 
 
 ## License
