@@ -84,7 +84,9 @@ python app.py
 ```
 
 ## Result Images
-images/1.jpg
+<img src="Images/1.png" width="200">
+<img src="Images/2.png" width="200">
+<img src="Images/3.png" width="200">
 ![Mahjong Demo](Images/1.png)
 ![Mahjong Demo](Images/2.png)
 ![Mahjong Demo](Images/3.png)
