@@ -1,5 +1,5 @@
 # mahjong-Detector
-Mahjong Tile Detector built with YOLO.
+This project was created to solve automated Majong analysis: recognizing tile types from real-world images. It uses a custom-trained YOLO model with optimized preprocessing, data augmentation, and small-object tuning to detect tile classes. 
 
 ## Dataset Attribution & Usage
 - This project uses a Mahjong tile dataset originally created by <https://github.com/Camerash/mahjong-dataset>
