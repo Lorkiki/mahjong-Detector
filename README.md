@@ -75,8 +75,7 @@ device=mps
 ```
 
 ## Host a website and show result
-run command to create environment 
-download needed requirements
+run command to create environment and download needed requirements
 ```
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
