@@ -74,7 +74,7 @@ save=True \
 device=mps
 ```
 
-## Host website and show result
+## Host a website and show result
 run command to create environment 
 download needed requirements
 ```
