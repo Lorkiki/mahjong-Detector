@@ -16,20 +16,28 @@ shutil: copying files
 
 
 
-
+‘’‘
+Class of tiles
+32 different tiles
+’‘’
 CLASS_NAMES = (
     [f"bamboo-{i}" for i in range(1,10)]
     + [f"characters-{i}" for i in range(1,10)]
     + [f"dots-{i}" for i in range(1,10)]
     + ["east", "north", "red", "south", "west"]
 )
+
+'''
+tile_name: ID
+'''
 CLASS_TO_ID = {name: i for i, name in enumerate(CLASS_NAMES)}
 
 
 
 # ----------------------------
-# Allowed Fujian Mahjong subset from your CSV
+# Allowed Fujian Mahjong subset from CSV
 # (bamboo/dots/characters 1..9 + east/south/west/north/red)
+# Names from dataset
 # ----------------------------
 DOTS = [f"dots-{i}" for i in range(1, 10)]
 BAMBOO = [f"bamboo-{i}" for i in range(1, 10)]
@@ -37,17 +45,16 @@ CHAR = [f"characters-{i}" for i in range(1, 10)]
 WINDS_HONORS = ["honors-east", "honors-south", "honors-west", "honors-north", "honors-red"]
 ALLOWED_RAW = set(DOTS + BAMBOO + CHAR + WINDS_HONORS)
 
-# Map CSV labels to the final class names used by YOLO
+# delete prefix of honors
 NORMALIZE = {
     "honors-east": "east",
     "honors-south": "south",
     "honors-west": "west",
     "honors-north": "north",
     "honors-red": "red",
-    # pass-through for numbered suits happens below
 }
 
-IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+IMG_EXTS = {".jpg", ".jpeg", ".png"}
 
 def normalize_label(label: str) -> str | None:
     """Normalize CSV label to one of CLASS_NAMES (or None if not used)."""
@@ -84,7 +91,7 @@ def write_label(label_path: Path, cls_id: int, x=0.5, y=0.5, w=0.9, h=0.9):
 
 def main():
     # create a CLI parser with description
-    ap = argparse.ArgumentParser(description="Build Fujian Mahjong YOLO dataset from CSV in one step.")
+    ap = argparse.ArgumentParser(description="Build Fujian Mahjong YOLO dataset from CSV")
     ap.add_argument("--csv", type=Path, required=True, help="Path to data.csv")
     ap.add_argument("--images", type=Path, required=True, help="Folder containing source images referenced by CSV")
     ap.add_argument("--dst", type=Path, required=True, help="Destination root for YOLO dataset")
