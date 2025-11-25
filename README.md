@@ -62,6 +62,22 @@ yolo detect train \
     patience=20 
 ```
 
+For Window with high-end GPU
+Install the latest version for RTX 50 series
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+yolo detect train \
+    model=yolo11m.pt \
+    data=dst/data.yaml \
+    epochs=100 \
+    imgsz=1024 \
+    batch=-1 \
+    device=0 \
+    name=mahjong_y11s \
+    cos_lr=True \
+    patience=20 
+```
+
 ## Predict the Image
 - best.pt is result of training
 - Run the command to predict images
